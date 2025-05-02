@@ -1,0 +1,90 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  background: linear-gradient(to top, #004f6e, #00b8d9);
+  color: white;
+  flex-wrap: wrap;
+}
+
+.left {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.partner {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.1);
+}
+
+.vipps {
+  height: 70px; /* gjør bare Vipps litt større */
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+  filter: brightness(1.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .right {
+    margin-top: 1.5rem;
+  }
+
+  .left {
+    justify-content: center;
+  }
+}
+.attribution {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 1rem;
+  text-align: center;
+}
+.attribution a {
+  color: inherit;
+  text-decoration: underline;
+}
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

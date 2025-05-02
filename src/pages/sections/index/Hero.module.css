@@ -1,0 +1,59 @@
+.wrapper {
+  padding: 2rem;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 6rem;
+}
+
+/* Venstre side: tekst + facebook */
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Høyre side: swiper + kalender */
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.textContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.textContent h3 {
+  margin-bottom: 1rem;
+}
+
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .heroContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .leftSide,
+  .rightSide {
+    flex: 1;
+  }
+
+  .textContent {
+    margin-right: 1rem;
+  }
+}

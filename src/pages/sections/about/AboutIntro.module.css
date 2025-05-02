@@ -1,0 +1,58 @@
+.intro {
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    gap: 2rem;
+  }
+  
+  .text {
+    text-align: center;
+    color: #1a1a1a;
+  }
+  
+  .contact {
+    margin-top: 1rem;
+    color: #004f6e;
+    font-weight: 500;
+  }
+  
+  .logoWrap {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logo {
+    height: 80px;
+    width: auto;
+  }
+  
+  @media (min-width: 768px) {
+    .card {
+      flex-direction: row;
+      text-align: left;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .text {
+      flex: 2;
+    }
+  
+    .logoWrap {
+      flex: 1;
+      justify-content: flex-end;
+    }
+  }
+  

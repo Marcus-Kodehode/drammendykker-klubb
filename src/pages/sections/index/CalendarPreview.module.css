@@ -1,0 +1,23 @@
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.fbPost {
+  margin-top: 1rem;
+}
+
+.cover {
+  height: 160px;
+  background: #ccc; /* testfarge */
+  border-radius: 0.5rem;
+}
+
+.post {
+  padding-top: 1rem;
+  font-size: 0.95rem;
+}

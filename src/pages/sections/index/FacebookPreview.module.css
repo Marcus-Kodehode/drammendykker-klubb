@@ -1,0 +1,81 @@
+.wrapper {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: #f9f9f9;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background-image: url('/images/logo.webp'); /* Juster stien etter behov */
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.followers {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.image {
+  background-image: url('/images/header1.webp'); /* Juster til ønsket bilde */
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.date {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.25rem;
+}
+
+.event {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: #555;
+}

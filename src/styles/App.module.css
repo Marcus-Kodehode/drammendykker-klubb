@@ -1,0 +1,18 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .wrapper {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Desktop-style */
+  @media screen and (min-width: 768px) {
+    .wrapper {
+      padding: 4rem;
+      text-align: left;
+    }
+  }
+  
