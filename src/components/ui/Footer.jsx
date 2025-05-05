@@ -83,3 +83,4 @@ export default Footer
    På mobil vises alt som tre seksjoner under hverandre (grid), men på desktop er layouten
    uendret og horisontal.
 */
+
