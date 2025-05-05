@@ -11,6 +11,9 @@ const BoardGrid = () => {
           name={member.name}
           role={member.role}
           image={member.image}
+          email={member.email}            // 👈 LEGG TIL DISSE
+          facebook={member.facebook}
+          instagram={member.instagram}
         />
       ))}
     </section>

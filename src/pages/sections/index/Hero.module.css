@@ -1,12 +1,12 @@
+/* Mobil først – standard layout */
 .wrapper {
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 .heroContainer {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 4rem 6rem;
 }
 
 /* Venstre side: tekst + facebook */
@@ -15,6 +15,7 @@
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+  width: 100%;
 }
 
 /* Høyre side: swiper + kalender */
@@ -23,25 +24,30 @@
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+  width: 100%;
 }
 
 .textContent {
   background: white;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 500px;
-  text-align: left;
+  text-align: center;
 }
 
 .textContent h3 {
   margin-bottom: 1rem;
+  font-size: 1.25rem;
 }
 
 
 /* Desktop layout */
 @media (min-width: 768px) {
+  .wrapper {
+    padding: 4rem 6rem;
+  }
+
   .heroContainer {
     flex-direction: row;
     justify-content: space-between;
@@ -51,9 +57,17 @@
   .leftSide,
   .rightSide {
     flex: 1;
+    align-items: flex-start;
   }
 
   .textContent {
+    max-width: 500px;
+    text-align: left;
     margin-right: 1rem;
+    padding: 2rem;
+  }
+
+  .textContent h3 {
+    font-size: 1.5rem;
   }
 }

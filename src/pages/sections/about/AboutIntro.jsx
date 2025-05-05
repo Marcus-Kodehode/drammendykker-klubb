@@ -12,7 +12,7 @@ const AboutIntro = () => {
             Klubben har et sterkt fokus på sikkerhet, inkludering og sosialt miljø – både over og under vann.
           </p>
           <p className={styles.contact}>
-            <strong>E-post:</strong> post@drammensportsdykkere.no<br />
+            <strong>E-post:</strong> Info@drammensportsdykkere.no<br />
             <strong>Telefon:</strong> 977 05 385
           </p>
         </div>
