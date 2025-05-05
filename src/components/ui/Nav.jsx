@@ -1,6 +1,7 @@
-import { NavLink } from 'react-router-dom';
-import navStyles from './Nav.module.css';
-import buttonStyles from '../base/Button.module.css';
+import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import navStyles from './Nav.module.css'
+import buttonStyles from '../base/Button.module.css'
 
 const navItems = [
   { to: '/', text: 'Hjem' },
@@ -9,28 +10,94 @@ const navItems = [
   { to: '/dykkeplasser', text: 'Dykkeplasser' },
   { to: '/medlemmer', text: 'Medlem' },
   { to: '/galleri', text: 'Bildegalleri' },
-  { to: '/aktiviteter', text: 'Aktiviteter' },
-];
+  { to: '/aktiviteter', text: 'Aktiviteter' }
+]
 
 const Nav = () => {
-  return (
-    <nav className={navStyles.navList}>
-      {navItems.map(({ to, text }) => (
-        <NavLink
-          key={to}
-          to={to}
-          className={({ isActive }) =>
-            `${buttonStyles.nav} ${isActive ? buttonStyles.active : ''}`
-          }
-        >
-          {text}
-          <span className={buttonStyles.bubble}></span>
-          <span className={buttonStyles.bubble}></span>
-          <span className={buttonStyles.bubble}></span>
-        </NavLink>
-      ))}
-    </nav>
-  );
-};
+  const [isOpen, setIsOpen] = useState(false)
+  const closeMenu = () => setIsOpen(false)
 
-export default Nav;
+  return (
+    <>
+      {/* 🍔 Hamburger vises kun når menyen er lukket */}
+      {!isOpen && (
+        <button
+          className={navStyles.burger}
+          onClick={() => setIsOpen(true)}
+          aria-label="Åpne meny"
+        >
+          ☰
+        </button>
+      )}
+
+      {/* 🖥️ Desktop meny (synlig alltid) */}
+      <nav className={navStyles.navList}>
+        {navItems.map(({ to, text }) => (
+          <NavLink
+            key={to}
+            to={to}
+            className={({ isActive }) =>
+              `${buttonStyles.nav} ${isActive ? buttonStyles.active : ''}`
+            }
+          >
+            {text}
+            <span className={buttonStyles.bubble}></span>
+            <span className={buttonStyles.bubble}></span>
+            <span className={buttonStyles.bubble}></span>
+          </NavLink>
+        ))}
+      </nav>
+
+      {/* 📱 Mobil overlay meny (når åpen) */}
+      {isOpen && (
+        <div className={navStyles.overlay}>
+          <button
+            className={navStyles.close}
+            onClick={closeMenu}
+            aria-label="Lukk meny"
+          >
+            ✕
+          </button>
+          <div className={navStyles.menu}>
+            {navItems.map(({ to, text }) => (
+              <NavLink
+                key={to}
+                to={to}
+                onClick={closeMenu}
+                className={({ isActive }) =>
+                  `${buttonStyles.nav} ${isActive ? buttonStyles.active : ''}`
+                }
+              >
+                {text}
+                <span className={buttonStyles.bubble}></span>
+                <span className={buttonStyles.bubble}></span>
+                <span className={buttonStyles.bubble}></span>
+              </NavLink>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
+  )
+}
+
+export default Nav
+
+
+
+
+/**
+ * 📦 Nav.jsx
+ * 
+ * Denne komponenten håndterer all navigasjon i toppmenyen.
+ * 
+ * ✅ På desktop:
+ *    - Viser alle navigasjonslenker horisontalt.
+ * 
+ * ✅ På mobil:
+ *    - Viser en burger-knapp (☰) som åpner en vertikal meny.
+ *    - Bytter ikon til ✖ når menyen er åpen.
+ *    - Lukker menyen automatisk når en lenke trykkes.
+ * 
+ * 🎨 Styling og aktiv tilstand styres gjennom navStyles og globale knappe-stiler.
+ */

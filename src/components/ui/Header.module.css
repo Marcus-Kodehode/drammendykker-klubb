@@ -64,6 +64,22 @@
 
 
 @media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 1rem 1.5rem;
+    overflow-x: hidden;
+    position: sticky;
+    top: 0; /* 👈 denne er viktig */
+    z-index: 1000; /* sørg for at den ligger over annet innhold */
+  }
+
+  .title {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
   .overlay {
     flex-direction: column;
     align-items: flex-start;

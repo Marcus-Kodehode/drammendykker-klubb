@@ -8,55 +8,61 @@
 /* === Variabler === */
 :root {
   --color-primary: #004F6E;
-  --color-accent: #00B8D9;
-  --color-bg: #F0F5F9;
-  --color-text: #1A1A1A;
-  --color-alert: #FF6B6B;
+  --color-accent:  #00B8D9;
+  --color-bg:      #F0F5F9;
+  --color-text:    #1A1A1A;
+  --color-alert:   #FF6B6B;
 
-  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-body:    'IBM Plex Sans', sans-serif;
   --font-heading: 'Outfit', sans-serif;
 }
 
 /* === Base styles === */
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
 body {
-  font-family: var(--font-body);
+  /* Unngå horisontal scrolling på selve innholdet */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  font-family:     var(--font-body);
   background-color: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.6;
+  color:           var(--color-text);
+  line-height:     1.6;
 }
 
 /* === Typography === */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 600;
-  color: var(--color-primary);
+  color:       var(--color-primary);
   line-height: 1.2;
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.6rem;
-}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.6rem; }
+
 p {
-  font-size: 1rem;
+  font-size:      1rem;
   margin-bottom: 1rem;
 }
 
-/* === Links === */
+/* === Lenker === */
 a {
-  color: inherit;
+  color:           inherit;
   text-decoration: none;
 }
 
-/* === Buttons === */
+/* === Knapper === */
 button {
   font-family: inherit;
-  background: none;
-  border: none;
-  cursor: pointer;
+  background:   none;
+  border:       none;
+  cursor:       pointer;
 }
+
