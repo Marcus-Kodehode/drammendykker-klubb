@@ -7,6 +7,8 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  justify-content: space-between;
+  max-width: 1440px;
 }
 
 /* Venstre side: tekst + facebook */
@@ -15,7 +17,7 @@
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  width: 100%;
+  width: 50%;
 }
 
 /* Høyre side: swiper + kalender */
@@ -24,7 +26,7 @@
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  width: 100%;
+  width: 50%;
 }
 
 .textContent {
@@ -58,6 +60,7 @@
   .rightSide {
     flex: 1;
     align-items: flex-start;
+    max-width: 620px;
   }
 
   .textContent {
@@ -69,5 +72,13 @@
 
   .textContent h3 {
     font-size: 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .leftSide,
+  .rightSide {
+    width: 100%;
+    max-width: 620px; /* Holder ting ryddig */
+    margin: 0 auto;
   }
 }

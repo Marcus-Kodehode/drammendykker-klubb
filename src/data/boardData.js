@@ -1,5 +1,14 @@
-import mann from '/images/mann.png';
+// import mann from '/images/mann.png';
 import dame from '/images/dame.png';
+import trond from '/images/personal/trond.webp';
+import vegard from '/images/personal/vegard.webp';
+import christine from '/images/personal/christine.webp';
+import aslaug from '/images/personal/aslaug.webp';
+import klaus from '/images/personal/klaus.webp';
+import jonas from '/images/personal/jonas.webp';
+import raymond from '/images/personal/raymond.webp';
+import martin from '/images/personal/martin.webp';
+
 
 const boardData = [
   {
@@ -8,7 +17,7 @@ const boardData = [
     email: 'example@dykkerklubb.no',
     facebook: 'https://facebook.com/example', 
     instagram: 'https://instagram.com/example',
-    image: mann,
+    image: trond,
   },
   {
     name: 'Vegard Thorsen',
@@ -16,7 +25,7 @@ const boardData = [
     email: 'example@dykkerklubb.no',
     facebook: 'https://facebook.com/example', 
     instagram: 'https://instagram.com/example',
-    image: mann,
+    image: vegard,
   },
   {
     name: 'Helena',
@@ -32,7 +41,7 @@ const boardData = [
     email: 'example@dykkerklubb.no',
     facebook: 'https://facebook.com/example', 
     instagram: 'https://instagram.com/example',
-    image: dame,
+    image: christine,
   },
   {
     name: 'Åslaug Johansen',
@@ -40,7 +49,7 @@ const boardData = [
     email: 'example@dykkerklubb.no',
     facebook: 'https://facebook.com/example', 
     instagram: 'https://instagram.com/example',
-    image: dame,
+    image: aslaug,
   },
   {
     name: 'Klaus Myrseth',
@@ -48,7 +57,7 @@ const boardData = [
     email: 'example@dykkerklubb.no',
     facebook: 'https://facebook.com/example', 
     instagram: 'https://instagram.com/example',
-    image: mann,
+    image: klaus,
   },
   {
     name: 'Jonass Gundersen',
@@ -56,7 +65,7 @@ const boardData = [
     email: 'example@dykkerklubb.no',
     facebook: 'https://facebook.com/example', 
     instagram: 'https://instagram.com/example',
-    image: mann,
+    image: jonas,
   },
   {
     name: 'Raymond Smith',
@@ -64,7 +73,7 @@ const boardData = [
     email: 'example@dykkerklubb.no',
     facebook: 'https://facebook.com/example', 
     instagram: 'https://instagram.com/example',
-    image: mann,
+    image: raymond,
   },
   {
     name: 'Martin Hansen',
@@ -72,7 +81,7 @@ const boardData = [
     email: 'example@dykkerklubb.no',
     facebook: 'https://facebook.com/example', 
     instagram: 'https://instagram.com/example',
-    image: mann,
+    image: martin,
   },
 ];
 
