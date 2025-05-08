@@ -1,7 +1,7 @@
-import styles from './LightBox.module.css'
+import styles from './Lightbox.module.css'
 import OverlayButton from '../../../../components/base/OverlayButton';
 
-const LightBox = ({ images, currentIndex, onClose, onPrev, onNext }) => {
+const Lightbox = ({ images, currentIndex, onClose, onPrev, onNext }) => {
   const image = images[currentIndex]
 
   return (
@@ -19,4 +19,4 @@ const LightBox = ({ images, currentIndex, onClose, onPrev, onNext }) => {
   )
 }
 
-export default LightBox
+export default Lightbox

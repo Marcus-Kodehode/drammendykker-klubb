@@ -3,7 +3,7 @@ import styles from './GalleryStrip.module.css'
 import kris1 from '/images/kris1.jpg'
 import kris2 from '/images/kris2.jpg'
 import kris3 from '/images/kris3.jpg'
-import LightBox from './components/LightBox'
+import Lightbox from './components/Lightbox'
 
 const images = [kris1, kris2, kris3]
 
@@ -34,7 +34,7 @@ const GalleryStrip = () => {
       </div>
 
       {selectedIndex !== null && (
-        <LightBox
+        <Lightbox
         images={images}
         currentIndex={selectedIndex}
         onClose={handleClose}
