@@ -3,7 +3,7 @@ import styles from './GalleryStrip.module.css'
 import kris1 from '/images/kris1.jpg'
 import kris2 from '/images/kris2.jpg'
 import kris3 from '/images/kris3.jpg'
-import Lightbox from '../about/components/LightBox';
+import LightBox from './components/LightBox'
 
 const images = [kris1, kris2, kris3]
 
@@ -34,13 +34,14 @@ const GalleryStrip = () => {
       </div>
 
       {selectedIndex !== null && (
-        <Lightbox
-          images={images}
-          currentIndex={selectedIndex}
-          onClose={handleClose}
-          onNext={handleNext}
-          onPrev={handlePrev}
-        />
+        <LightBox
+        images={images}
+        currentIndex={selectedIndex}
+        onClose={handleClose}
+        onNext={handleNext}
+        onPrev={handlePrev}
+      />
+
       )}
 
       <p className={styles.credit}>

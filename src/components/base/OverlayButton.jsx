@@ -1,11 +1,14 @@
-import styles from './OverlayButton.module.css'
+import styles from './OverlayButton.module.css';
 
-const OverlayButton = ({ onClick, label, position }) => {
+const OverlayButton = ({ label, position, onClick }) => {
   return (
-    <button className={`${styles.button} ${styles[position]}`} onClick={onClick}>
+    <button
+      className={`${styles.button} ${styles[position]}`}
+      onClick={onClick}
+    >
       {label}
     </button>
-  )
-}
+  );
+};
 
-export default OverlayButton
+export default OverlayButton;
