@@ -1,12 +1,19 @@
+import { useState } from 'react'
+import DiveIntro from './sections/divesites/DiveIntro'
+import DiveSubmitModal from './sections/divesites/DiveSubmitModal'
+import DiveGrid from './sections/divesites/DiveGrid'
 import styles from './DiveSites.module.css'
 
-const DiveSite = () => {
+const DiveSites = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
-    <div className={styles.Divesite}>
-      <h1>Dykkeplasser</h1>
-      <p>Her kommer bilder fra klubbens dykkerplasser.</p>
+    <div className={styles.wrapper}>
+      <DiveIntro onOpen={() => setIsOpen(true)} />
+      {isOpen && <DiveSubmitModal onClose={() => setIsOpen(false)} />}
+      <DiveGrid />
     </div>
   )
 }
 
-export default DiveSite
+export default DiveSites

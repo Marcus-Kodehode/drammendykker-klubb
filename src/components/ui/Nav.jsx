@@ -7,7 +7,7 @@ const navItems = [
   { to: '/', text: 'Hjem' },
   { to: '/om-oss', text: 'Om oss' },
   { to: '/kontakt', text: 'Kontakt' },
-  { to: '/dykkeplasser', text: 'Dykkeplasser' },
+  { to: '/dykkerplasser', text: 'Dykkeplasser' },
   { to: '/medlemmer', text: 'Medlem' },
   { to: '/galleri', text: 'Bildegalleri' },
   { to: '/aktiviteter', text: 'Aktiviteter' }

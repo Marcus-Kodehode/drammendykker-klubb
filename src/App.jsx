@@ -7,6 +7,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Gallery from './pages/Gallery'  // eller PictureGallery
 import Events from './pages/Events'    // eller Activities
+import DiveSites from './pages/DiveSites'
 
 
 
@@ -15,13 +16,15 @@ function App() {
     <>
     <Header />
     <main className={styles.app}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/om-oss" element={<About />} />
-        <Route path="/kontakt" element={<Contact />} />
-        <Route path="/galleri" element={<Gallery />} />
-        <Route path="/aktiviteter" element={<Events />} />
-      </Routes> 
+    <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/om-oss" element={<About />} />
+          <Route path="/kontakt" element={<Contact />} />
+          <Route path="/galleri" element={<Gallery />} />
+          <Route path="/aktiviteter" element={<Events />} />
+          <Route path="/dykkerplasser" element={<DiveSites />} />
+    </Routes>
+
     </main>
       <Footer />
       </>

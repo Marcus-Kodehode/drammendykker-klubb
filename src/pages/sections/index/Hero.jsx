@@ -1,5 +1,5 @@
 import styles from './Hero.module.css'
-import ImageSlider from '../components/ImageSlider'
+import ImageSlider from '../index/components/ImageSlider';
 import FacebookPreview from './FacebookPreview'
 import CalendarPreview from './CalendarPreview'
 import Button from '../../../components/base/Button'

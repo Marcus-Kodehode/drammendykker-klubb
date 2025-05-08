@@ -10,4 +10,12 @@
       text-align: left;
     }
   }
+  .contactSection {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   

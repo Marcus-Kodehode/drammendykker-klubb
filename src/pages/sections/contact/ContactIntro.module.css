@@ -1,0 +1,18 @@
+.intro {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+  
+  .intro p {
+    font-size: 1rem;
+    color: var(--color-text);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
