@@ -1,32 +1,50 @@
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import styles from './DiveGrid.module.css'
+import { diveSites } from '../../../data/diveSites'
 
-const dummySites = [
-  {
-    name: 'Åbyfjorden',
-    location: 'Vestfold',
-    difficulty: 'Middels',
-    description: 'Populært sted med klart vann og mye fisk.'
-  },
-  {
-    name: 'Hvasser',
-    location: 'Tjøme',
-    difficulty: 'Lett',
-    description: 'Perfekt for nybegynnere og lett tilgjengelig.'
-  }
-]
+const categories = ['All', 'P1', 'P2', 'P3', 'Vegg', 'Vrakdykk']
 
 const DiveGrid = () => {
+  const [filter, setFilter] = useState('All')
+
+  const filteredSites = filter === 'All'
+    ? diveSites
+    : diveSites.filter(site => site.categories.includes(filter))
+
   return (
-    <section className={styles.grid}>
-      {dummySites.map((site, idx) => (
-        <div key={idx} className={styles.card}>
-          <h3>{site.name}</h3>
-          <p><strong>Sted:</strong> {site.location}</p>
-          <p><strong>Nivå:</strong> {site.difficulty}</p>
-          <p>{site.description}</p>
-        </div>
-      ))}
-    </section>
+    <>
+      <nav className={styles.filterNav}>
+        {categories.map(cat => (
+          <button
+            key={cat}
+            className={filter === cat ? styles.active : ''}
+            onClick={() => setFilter(cat)}
+          >
+            {cat}
+          </button>
+        ))}
+      </nav>
+
+      <section className={styles.grid}>
+        {filteredSites.map(site => (
+          <Link
+            key={site.id}
+            to={`/dykkerplasser/${site.id}`}
+            className={styles.card}
+          >
+            <div className={styles.imageWrapper}>
+              <img
+                src={site.image}
+                alt={site.name}
+                className={styles.image}
+              />
+            </div>
+            <h3>{site.name}</h3>
+          </Link>
+        ))}
+      </section>
+    </>
   )
 }
 

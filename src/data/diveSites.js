@@ -1,0 +1,110 @@
+// src/data/diveSites.js
+
+export const diveSites = [
+    {
+      id: 'edith',
+      name: 'Edith',
+      categories: ['P1', 'Vegg'],
+      image: '/public/images/locations/Edith.webp',
+      description: '…ligger nordøst for Hovedøya. Det er satt opp markereingsøye på vraket. Denne finner man rett sør for skipsledsmarkør nummer 19. Om bøya ikke er der kan man ta utgangspunkt fra stupebrettet øst for markøren og dykke vestover ned til 30 meter. Selve vraket er delt i 2: Baugen befinner seg på mellom 21 og 35 meter, mens resten befinner seg på mellom 40 og 70 meter.',
+    },
+    {
+      id: 'mokkatalasset',
+      name: 'Møkkalasset',
+      categories: ['P2', 'Vegg'],
+      image: '/public/images/locations/Mokkalasset.webp',
+      description: 'Gå ut der pilen viser og bruk litt tid i området på 10 m før dere svømmer sydover langs veggen. Dybde blir etterhvert mot 20-25 m. Også mulighet til å gå nord i stedet. Her er dybden opp mot 30 m',
+    },
+    {
+      id: 'torpedobatteriet',
+      name: 'Torpedobatteriet',
+      categories: ['P1', 'Vegg'],
+      image: '/public/images/locations/Torpedobatteriet.webp',
+      description: '…',
+    },
+    {
+      id: 'lovoya',
+      name: 'Løvøya',
+      categories: ['P1'],
+      image: '/public/images/locations/Lovoya.webp',
+      description: '…',
+    },
+    {
+      id: 'aros',
+      name: 'Åros',
+      categories: ['P2'],
+      image: '/public/images/locations/Aros.webp',
+      description: '…',
+    },
+    {
+      id: 'prodykk',
+      name: 'Prodykk',
+      categories: ['P1'],
+      image: '/public/images/locations/Prodykk.webp',
+      description: '…',
+    },
+    {
+      id: 'sjostrand',
+      name: 'Sjøstrand',
+      categories: ['Vegg', 'Vrakdykk'],
+      image: '/public/images/locations/Sjostrand.webp',
+      description: '…',
+    },
+    {
+      id: 'knatvoldstranda',
+      name: 'Knatvoldstranda',
+      categories: ['Vegg'],
+      image: '/public/images/locations/Knatvoldstranda.webp',
+      description: '…',
+    },
+    {
+      id: 'batsto',
+      name: 'Båtstø / RSDK klubbhuset',
+      categories: ['P2'],
+      image: '/public/images/locations/Batsto.webp',
+      description: '…',
+    },
+    {
+      id: 'bjerkasholmen',
+      name: 'Bjerkåsholmen',
+      categories: ['P3'],
+      image: '/public/images/locations/Bjerkasholmen.webp',
+      description: '…',
+    },
+    {
+      id: 'storsand',
+      name: 'Storsand',
+      categories: ['P1'],
+      image: '/public/images/locations/Storsand.webp',
+      description: '…',
+    },
+    {
+      id: 'donau',
+      name: 'Donau',
+      categories: ['P2', 'Vrakdykk'],
+      image: '/public/images/locations/Donau.webp',
+      description: '…',
+    },
+    {
+      id: 'ramton-camping',
+      name: 'Ramton camping',
+      categories: ['P1'],
+      image: '/public/images/locations/RamtonCamping.webp',
+      description: '…',
+    },
+    {
+      id: 'muren',
+      name: 'Muren',
+      categories: ['Vrakdykk'],
+      image: '/public/images/locations/Muren.webp',
+      description: '…',
+    },
+    {
+      id: 'freyborgstua',
+      name: 'Freyborgstua',
+      categories: ['P3'],
+      image: '/public/images/locations/Freyborgstua.webp',
+      description: '…',
+    }
+  ]
+  
