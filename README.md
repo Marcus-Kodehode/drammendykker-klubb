@@ -1,12 +1,97 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="MBlogo1.png" alt="MB Logo" width="200"/>
+</p>
 
-Currently, two official plugins are available:
+# Drammen Dykkerklubb – Nettside
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Velkommen til det offisielle nettstedet for **Drammen Dykkerklubb** – et frontend-prosjekt utviklet med React og Vite. Dette er en moderne, responsiv nettside designet for å presentere klubben, aktiviteter og kontaktinformasjon på en brukervennlig måte.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🌊 Hva er dette prosjektet?
+
+Dette prosjektet er laget som en del av en læringsreise i webutvikling. Målet er å kombinere ekte klubbbehov med praktisk frontend-erfaring.
+
+---
+
+## 🚀 Kom i gang
+
+### 1. Klon prosjektet
+
+```bash
+git clone https://github.com/dittbrukernavn/drammendykker-klubb.git
+cd drammendykker-klubb
+```
+
+### 2. Installer avhengigheter
+
+```bash
+npm install
+```
+
+### 3. Kjør prosjektet lokalt
+
+```bash
+npm run dev
+```
+
+---
+
+## 🛠️ Teknologier brukt
+
+- **React** – Bygger brukergrensesnittet
+- **Vite** – Rask utviklingsserver og byggverktøy
+- **JavaScript / JSX** – Programmeringsspråket
+- **HTML/CSS** – Struktur og stil
+- **ESLint** – Kvalitetssikrer kode
+
+---
+
+## 🗂️ Prosjektstruktur
+
+```
+drammendykker-klubb/
+├── public/             # Offentlige filer
+├── src/                # Kildekode
+│   ├── components/     # Gjenbrukbare komponenter
+│   ├── pages/          # Hovedsider (Home, About, Contact, etc.)
+│   └── App.jsx         # Rotkomponenten
+├── index.html          # HTML-mal
+├── package.json        # Avhengigheter og scripts
+└── vite.config.js      # Konfigurasjon for Vite
+```
+
+---
+
+## 🔧 Videre utvikling
+
+Planer for fremtiden:
+- Legge til kontaktskjema med validering
+- Integrasjon med kart (f.eks. Google Maps)
+- CMS-støtte for lett innholdshåndtering
+
+---
+
+## 📸 Eksempel på nettsiden
+
+*![Drammen Dykkerklubb](public/drammen-d.png)*
+
+---
+
+## ✍️ Signatur
+
+```
+//  One bug to find them,
+//  One fix to bring them all,
+//  And in the darkness bind them.
+```
+
+---
+
+## 📬 Kontakt
+
+Har du spørsmål eller vil bidra? Ta kontakt eller åpne en issue på GitHub!
+
+---
+
