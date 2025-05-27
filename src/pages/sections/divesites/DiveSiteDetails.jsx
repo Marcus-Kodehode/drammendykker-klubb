@@ -22,6 +22,15 @@ const DiveSiteDetails = () => {
     navigate(`/dykkerplasser/${diveSites[nextIndex].id}`)
   }
 
+  const renderLevelTags = (levelStr) => {
+    if (!levelStr) return 'Ukjent'
+    return levelStr.split('–').map(level => (
+      <span key={level} className={`${styles.levelTag} ${styles[level.trim()]}`}>
+        {level.trim()}
+      </span>
+    ))
+  }
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.backLink}>
@@ -33,28 +42,32 @@ const DiveSiteDetails = () => {
         <button onClick={handleNext}>Neste ⟶</button>
       </div>
 
-      <h1 className={styles.title}>{site.name}</h1>
+      <div className={styles.card}>
+        <h1 className={styles.title}>{site.name}</h1>
 
-      {site.image && (
-        <img
-          src={site.image}
-          alt={site.name}
-          className={styles.image}
-        />
-      )}
+        {site.image && (
+          <img
+            src={site.image}
+            alt={site.name}
+            className={styles.image}
+          />
+        )}
 
-      <div className={styles.infoGrid}>
-        <p><strong>Sted:</strong> {site.address || 'Ikke oppgitt'}</p>
-        <p><strong>Nivå:</strong> {site.recommendedLevel || 'Ukjent'}</p>
-        <p><strong>Adkomst:</strong> {site.access || 'Ukjent'}</p>
-        <p><strong>Bemerkelser:</strong> {site.remarks || 'Ingen'}</p>
-        <p><strong>Dybde:</strong> {site.depth || 'Ikke oppgitt'}</p>
-        <p><strong>Fasiliteter:</strong> {site.facilities || 'Nei'}</p>
-        <p><strong>Skyllemuligheter:</strong> {site.rinseStation || 'Nei'}</p>
-        <p><strong>Bom:</strong> {site.tollGate || 'Nei'}</p>
+        <div className={styles.infoGrid}>
+          <p><strong>Sted:</strong> {site.address || 'Ikke oppgitt'}</p>
+          <p><strong>Nivå:</strong> {renderLevelTags(site.recommendedLevel)}</p>
+          <p><strong>Adkomst:</strong> {site.access || 'Ukjent'}</p>
+          <p><strong>Bemerkelser:</strong> {site.remarks || 'Ingen'}</p>
+          <p><strong>Dybde:</strong> {site.depth || 'Ikke oppgitt'}</p>
+          <p><strong>Fasiliteter:</strong> {site.facilities || 'Nei'}</p>
+          <p><strong>Skyllemuligheter:</strong> {site.rinseStation || 'Nei'}</p>
+          <p><strong>Bom:</strong> {site.tollGate || 'Nei'}</p>
+        </div>
+
+        <p className={styles.description}>
+          <strong>Beskrivelse:</strong> {site.description}
+        </p>
       </div>
-
-      <p className={styles.description}><strong>Beskrivelse:</strong> {site.description}</p>
     </div>
   )
 }
