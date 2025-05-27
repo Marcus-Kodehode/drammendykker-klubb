@@ -9,6 +9,7 @@ import Contact from './pages/Contact'
 import Gallery from './pages/Gallery'
 import Events from './pages/Events'
 import DiveSites from './pages/DiveSites'
+import Members from './pages/Members'
 
 function App() {
   return ( 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/galleri" element={<Gallery />} />
           <Route path="/aktiviteter" element={<Events />} />
           <Route path="/dykkerplasser/*" element={<DiveSites />} />
+          <Route path="/medlemmer/*" element={<Members />} />
         </Routes>
       </main>
       <Footer />

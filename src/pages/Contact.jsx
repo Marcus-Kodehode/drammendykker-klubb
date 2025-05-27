@@ -5,9 +5,11 @@ import MapEmbed from './sections/contact/components/MapEmbed'
 
 const Contact = () => {
   return (
-    <section className={styles.contactSection}>
-      <ContactIntro />
-      <ContactForm />
+    <section className={styles.wrapper}>
+      <div className={styles.card}>
+        <ContactIntro />
+        <ContactForm />
+      </div>
       <MapEmbed />
     </section>
   )

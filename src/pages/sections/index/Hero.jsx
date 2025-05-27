@@ -1,16 +1,17 @@
-import styles from './Hero.module.css'
-import ImageSlider from '../index/components/ImageSlider';
-import FacebookPreview from './FacebookPreview'
-import CalendarPreview from './CalendarPreview'
-import Button from '../../../components/base/Button'
+import styles from './Hero.module.css';
+import ImageSlider from './components/ImageSlider';
+import FacebookPreview from './FacebookPreview';
+import CalendarPreview from './CalendarPreview';
+import Button from '../../../components/base/Button';
+import MembershipCard from '../../../components/base/MembershipCard';
+import SupportCard from '../../../components/base/SupportCard';
 
 const Hero = () => {
   return (
-    <section className={styles.wrapper}>
-      <div className={styles.heroContainer}>
-        {/* Venstre: Tekst + Facebook */}
-        <div className={styles.leftSide}>
-          <div className={styles.textContent}>
+    <section id="hero" className={styles.wrapper}>
+      <div className={styles.heroGrid}>
+        <div className={styles.left}>
+          <div className={styles.intro}>
             <h3>
               Drammen Sportsdykkerklubb er en klubb for alle som trives i vannet – 
               enten du er nybegynner eller erfaren dykker.
@@ -27,17 +28,23 @@ const Hero = () => {
             <Button text="Bli medlem i dag" to="/medlemmer" variant="alert" size="lg" />
           </div>
 
-          <FacebookPreview />
+          <div className={styles.cardSpacing}>
+            <SupportCard />
+            <MembershipCard />
+          </div>
         </div>
 
-        {/* Høyre: Swiper + Kalender */}
-        <div className={styles.rightSide}>
+        <div className={styles.right}>
           <ImageSlider />
           <CalendarPreview />
         </div>
       </div>
-    </section>
-  )
-}
 
-export default Hero
+      <div className={styles.facebook}>
+        <FacebookPreview />
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

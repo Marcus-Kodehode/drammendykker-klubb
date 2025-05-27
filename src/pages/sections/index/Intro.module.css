@@ -1,0 +1,79 @@
+.heroIntro {
+  height: 100vh;
+  width: 100%;
+  background-image: url('/images/header2.webp');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 3rem;
+  text-align: center;
+  color: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  width: 90%;
+  animation: fadeIn 1.6s ease-out forwards;
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.overlay h1 {
+  font-size: 3.25rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.overlay p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+}
+
+@keyframes fadeIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    padding: 2rem 1.5rem;
+  }
+
+  .overlay h1 {
+    font-size: 2rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
+}
+
+.exploreButton {
+  background-color: #004e78;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.exploreButton:hover {
+  background-color: var(--color-primary-dark); /* Sørg for at denne variabelen finnes */
+}

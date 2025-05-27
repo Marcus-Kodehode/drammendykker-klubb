@@ -1,14 +1,18 @@
-import Hero from './sections/index/Hero'
-import CalendarPreview from './sections/index/CalendarPreview'
-import FacebookPreview from './sections/index/FacebookPreview'
+import { useRef } from 'react';
+import Intro from './sections/index/Intro';
+import Hero from './sections/index/Hero';
 
 const Home = () => {
+  const heroRef = useRef(null);
+
   return (
     <>
-      <Hero />
+      <Intro scrollToRef={heroRef} />
+      <Hero ref={heroRef} />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
+
 

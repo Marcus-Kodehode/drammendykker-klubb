@@ -1,0 +1,27 @@
+.filterNav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filterButton {
+  background-color: #e0f7fa;
+  border: 2px solid #007aa5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: #007aa5;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filterButton:hover {
+  background-color: #b2ebf2;
+}
+
+.active {
+  background-color: #007aa5;
+  color: white;
+}
+

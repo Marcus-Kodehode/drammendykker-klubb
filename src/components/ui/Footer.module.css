@@ -3,66 +3,51 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2rem 4rem;
+  padding: 1.5rem 2rem;
   background: linear-gradient(to bottom, #001f3f, #004f6e, #00b8d9);
   color: white;
   width: 100%;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  gap: 2rem;
 }
 
 .left, .socialIcons, .right {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 1rem;
-}
-
-.left {
-  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .right {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
+  flex-direction: column;
   align-items: flex-end;
-  gap: 0.5rem;
 }
-
 
 .partner,
-.vipps {
-  max-width: 120px;
-  width: 100%;
+.vipps,
+.icon,
+.logo {
+  max-height: 48px;
   height: auto;
+  width: auto;
   object-fit: contain;
-  filter: brightness(1.1);
+  transition: all 0.3s ease;
 }
 
-.vipps {
-  max-width: 150px;
+.partner:hover,
+.icon:hover,
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .icon {
-  height: 30px;
-  width: 30px;
-  object-fit: contain;
-  filter: brightness(1.1);
   cursor: pointer;
-  transition: transform 0.2s ease;
+  filter: brightness(1.1);
 }
 
-.icon:hover {
-  transform: scale(1.1);
-}
-
-.logo {
-  height: 50px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-  margin: 0 auto;
+.right p {
+  font-size: 0.85rem;
+  color: #e0e0e0;
+  margin: 0;
 }
 
 .visuallyHidden {
@@ -77,71 +62,34 @@
   border: 0;
 }
 
-/* === MOBILVISNING === */
 @media (max-width: 768px) {
   .footer {
-    display: block;
-    padding: 3rem 1rem 14rem;
-    background: linear-gradient(to bottom, #001f3f, #004f6e, #00b8d9);
-    color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem 5rem;
     text-align: center;
-    width: 100%;
-    box-sizing: border-box;
   }
 
-  .left {
-    display: flex;
+  .left,
+  .socialIcons,
+  .right {
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 1rem;
-    margin-bottom: 2rem;
   }
 
-  .left img {
-    max-width: 120px;
-    width: 100%;
+  .right {
+    flex-direction: column;
+  }
+
+  .logo {
+    max-width: 70px;
     height: auto;
-    object-fit: contain;
-  }
-
-  .socialIcons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
   }
 
   .socialIcons img {
     width: 40px;
     height: 40px;
-    object-fit: contain;
-  }
-
-  .right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .right p {
-    font-size: 0.85rem;
-    margin: 0;
-    color: white;
-  }
-
-  .logo {
-    display: block;
-    max-width: 70px;
-    height: auto;
-    margin: 0 auto;
-    object-fit: contain;
-  }
-
-  .visuallyHidden {
-    display: none;
   }
 }

@@ -1,0 +1,13 @@
+.calendarWrapper {
+  background: linear-gradient(to bottom right, #e3f7fc, #c7e9f5);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 76, 97, 0.12);
+}
+
+.calendarWrapper h2 {
+  font-size: 1.4rem;
+  color: #004466;
+  margin-bottom: 1rem;
+  text-align: center;
+}

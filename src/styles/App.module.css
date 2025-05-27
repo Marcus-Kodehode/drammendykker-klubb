@@ -1,18 +1,20 @@
 .app {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Gjenbrukbar wrapper med god padding og tilpasset titteljustering */
+.wrapper {
+  padding-inline: 1rem;
+  padding-block: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
   .wrapper {
-    padding: 1.5rem;
-    text-align: center;
+    padding-inline: 2rem;
+    padding-block: 4rem;
   }
-  
-  /* Desktop-style */
-  @media screen and (min-width: 768px) {
-    .wrapper {
-      padding: 4rem;
-      text-align: left;
-    }
-  }
-  
+}

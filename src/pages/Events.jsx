@@ -1,12 +1,17 @@
-import styles from './Events.module.css'
+import styles from './Events.module.css';
+import EventsOverview from './sections/events/EventsOverview';
+import Calendar from './sections/events/Calendar';
 
 const Events = () => {
   return (
-    <div className={styles.events}>
+    <div className={styles.wrapper}>
       <h1>Aktiviteter</h1>
-      <p>Her finner du informasjon om kommende aktiviteter og arrangementer.</p>
+      <div className={styles.grid}>
+        <EventsOverview />
+        <Calendar />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Events
+export default Events;

@@ -1,0 +1,42 @@
+.logos {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.logos a {
+  display: inline-block;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #e3f7fc, #c7e9f5);
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 76, 97, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  position: relative;
+}
+
+.logos a:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 20px rgba(0, 76, 97, 0.15);
+  filter: brightness(1.05);
+}
+
+.logos img {
+  height: 50px;
+  display: block;
+  max-width: 100%;
+}
+
+.logos a::before {
+  content: 'Klikk her';
+  position: absolute;
+  top: -0.8rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #005577;
+  opacity: 0.8;
+}

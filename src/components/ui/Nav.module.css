@@ -1,102 +1,60 @@
-/* ------------------------------
-   Desktop styles
--------------------------------- */
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  height: 100%;
-  padding-right: 2rem;
+.burger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  z-index: 1001;
 }
 
 .navList {
   display: flex;
   gap: 1.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-.nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.nav a:hover {
-  color: #a8eaff;
-}
-
-.active {
-  border-color: #003366;
-}
-
-
-/* ------------------------------
-   Fullskjerm overlay meny (mobil)
--------------------------------- */
 .overlay {
-  position: fixed;
-  inset: 0;
-  background-color: #003a5d;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-}
-
-.close {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;   /* 👈 endret fra right: 1.5rem */
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-
-/* Burgerknapp */
-.burger {
   display: none;
 }
 
-/* ------------------------------
-   Responsiv endring for mobil
--------------------------------- */
 @media (max-width: 768px) {
   .burger {
     display: block;
-    position: absolute;
-    top: 1.2rem;
-    right: 1.5rem;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    z-index: 1002;
   }
 
   .navList {
-    display: none; /* skjul vanlig nav-list i mobil */
+    display: none;
   }
-}
 
-/* Animasjon */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  .overlay {
+    display: flex;
+    flex-direction: column;
+    background: #001f3f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    padding: 2rem;
+  }
+
+  .close {
+    font-size: 2rem;
+    align-self: flex-end;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
 }

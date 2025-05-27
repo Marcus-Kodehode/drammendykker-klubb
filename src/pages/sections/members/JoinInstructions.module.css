@@ -1,0 +1,33 @@
+.wrapper {
+  padding: 1rem;
+  max-width: 480px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #004466;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #333;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+.card {
+  background: linear-gradient(to bottom right, #f0fbff, #e2f5fa);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 76, 97, 0.1);
+  padding: 1.5rem 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 76, 97, 0.15);
+}
+
+.card a {
+  color: #007ca6;
+  text-decoration: underline;
+}

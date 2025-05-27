@@ -3,8 +3,6 @@ import styles from './FacebookPreview.module.css'
 const FacebookPreview = () => {
   return (
     <section className={styles.wrapper}>
-      <h2 className={styles.title}>Se utvidet kalender.</h2>
-
       <div className={styles.card}>
         <div className={styles.header}>
           <div className={styles.logo} />
@@ -20,6 +18,7 @@ const FacebookPreview = () => {
           <p className={styles.date}>MAN, 25 MAI KL 18:00 UTC+1</p>
           <p className={styles.event}>Ekstraordinært årsmøte 2025</p>
           <p className={styles.subtext}>Blir oppdatert når bekreftet</p>
+          <a href="/aktiviteter" className={styles.calendarLink}>Vis kalender</a>
         </div>
       </div>
     </section>

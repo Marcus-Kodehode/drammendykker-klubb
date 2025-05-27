@@ -14,7 +14,7 @@ const CalendarPreview = () => {
           <p className={styles.title}>Skagerak Dykkekrets tur – Egypt</p>
         </div>
       </div>
-      <a href="#" className={styles.link}>Vis kalender</a>
+      <a href="/aktiviteter" className={styles.calendarLink}>Vis kalender</a>
     </section>
   );
 };

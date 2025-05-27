@@ -1,0 +1,50 @@
+.overview {
+  background: linear-gradient(to bottom right, #e3f7fc, #c7e9f5);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 76, 97, 0.12);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #004466;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.spond {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.spond img {
+  max-width: 180px;
+  margin: 0.5rem;
+}
+
+.stores {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.stores img {
+  height: 48px;
+}
+
+.map {
+  margin-top: 2rem;
+  border-radius: 12px;
+  border: none;
+}
+
+.vipps {
+  display: block;
+  margin: 2rem auto 0;
+  max-width: 220px;
+}

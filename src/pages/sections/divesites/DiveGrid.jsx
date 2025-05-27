@@ -1,33 +1,29 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import styles from './DiveGrid.module.css'
-import { diveSites } from '../../../data/diveSites'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import styles from './DiveGrid.module.css';
+import { diveSites } from '../../../data/diveSites';
+import FilterButtons from './components/FilterButtons';
 
-const categories = ['All', 'P1', 'P2', 'P3', 'Vegg', 'Vrakdykk']
+const categories = ['All', 'P1', 'P2', 'P3', 'Vegg', 'Vrakdykk'];
 
 const DiveGrid = () => {
-  const [filter, setFilter] = useState('All')
+  const [filter, setFilter] = useState('All');
 
-  const filteredSites = filter === 'All'
-    ? diveSites
-    : diveSites.filter(site => site.categories.includes(filter))
+  const filteredSites =
+    filter === 'All'
+      ? diveSites
+      : diveSites.filter((site) => site.categories.includes(filter));
 
   return (
     <>
-      <nav className={styles.filterNav}>
-        {categories.map(cat => (
-          <button
-            key={cat}
-            className={filter === cat ? styles.active : ''}
-            onClick={() => setFilter(cat)}
-          >
-            {cat}
-          </button>
-        ))}
-      </nav>
+      <FilterButtons
+        categories={categories}
+        currentFilter={filter}
+        onFilterChange={setFilter}
+      />
 
       <section className={styles.grid}>
-        {filteredSites.map(site => (
+        {filteredSites.map((site) => (
           <Link
             key={site.id}
             to={`/dykkerplasser/${site.id}`}
@@ -45,7 +41,7 @@ const DiveGrid = () => {
         ))}
       </section>
     </>
-  )
-}
+  );
+};
 
-export default DiveGrid
+export default DiveGrid;

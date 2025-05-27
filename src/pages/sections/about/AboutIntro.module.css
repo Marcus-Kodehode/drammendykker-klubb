@@ -2,16 +2,16 @@
   padding: 3rem 1rem;
   display: flex;
   justify-content: center;
-  background-color: #eaf6fa; /* myk bakgrunn som matcher havtemaet */
+  background-color: #f0faff; /* Lik bakgrunn som home */
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  background: white;
+  background: #e0f8ff; /* Match forsiden */
   padding: 2.5rem;
   border-radius: 1rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   max-width: 1000px;
   width: 100%;
   gap: 2rem;
@@ -19,7 +19,7 @@
 }
 
 .card:hover {
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .text {
@@ -28,9 +28,10 @@
 }
 
 .text h2 {
-  color: #004f6e;
-  font-size: 1.8rem;
+  color: var(--color-primary);
+  font-size: 2rem;
   margin-bottom: 1rem;
+  font-family: var(--font-heading);
 }
 
 .text p {
@@ -40,7 +41,7 @@
 
 .contact {
   margin-top: 1.2rem;
-  color: #004f6e;
+  color: var(--color-primary);
   font-weight: 600;
   font-size: 1rem;
 }
