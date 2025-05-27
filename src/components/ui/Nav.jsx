@@ -12,12 +12,12 @@ const navItems = [
   { to: '/aktiviteter', text: 'Aktiviteter' }
 ]
 
-const Nav = ({ setIsOpen }) => {
+const Nav = ({ setIsOpen, isOpen }) => {
   const closeMenu = () => setIsOpen(false)
 
   return (
     <>
-      {/* Desktop meny */}
+      {/* 🖥️ Desktop meny */}
       <nav className={navStyles.navList}>
         {navItems.map(({ to, text }) => (
           <NavLink
@@ -35,38 +35,41 @@ const Nav = ({ setIsOpen }) => {
         ))}
       </nav>
 
-      {/* Mobil overlay */}
-      <div className={navStyles.overlay}>
-        <button
-          className={navStyles.close}
-          onClick={closeMenu}
-          aria-label="Lukk meny"
-        >
-          ✕
-        </button>
-        <div className={navStyles.menu}>
-          {navItems.map(({ to, text }) => (
-            <NavLink
-              key={to}
-              to={to}
-              onClick={closeMenu}
-              className={({ isActive }) =>
-                `${buttonStyles.nav} ${isActive ? buttonStyles.active : ''}`
-              }
-            >
-              {text}
-              <span className={buttonStyles.bubble}></span>
-              <span className={buttonStyles.bubble}></span>
-              <span className={buttonStyles.bubble}></span>
-            </NavLink>
-          ))}
+      {/* 📱 Mobil overlay meny – vises kun når åpen */}
+      {isOpen && (
+        <div className={navStyles.overlay}>
+          <button
+            className={navStyles.close}
+            onClick={closeMenu}
+            aria-label="Lukk meny"
+          >
+            ✕
+          </button>
+          <div className={navStyles.menu}>
+            {navItems.map(({ to, text }) => (
+              <NavLink
+                key={to}
+                to={to}
+                onClick={closeMenu}
+                className={({ isActive }) =>
+                  `${buttonStyles.nav} ${isActive ? buttonStyles.active : ''}`
+                }
+              >
+                {text}
+                <span className={buttonStyles.bubble}></span>
+                <span className={buttonStyles.bubble}></span>
+                <span className={buttonStyles.bubble}></span>
+              </NavLink>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </>
   )
 }
 
 export default Nav
+
 
 
 
