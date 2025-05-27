@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import navStyles from './Nav.module.css'
 import buttonStyles from '../base/Button.module.css'
@@ -13,24 +12,12 @@ const navItems = [
   { to: '/aktiviteter', text: 'Aktiviteter' }
 ]
 
-const Nav = () => {
-  const [isOpen, setIsOpen] = useState(false)
+const Nav = ({ setIsOpen }) => {
   const closeMenu = () => setIsOpen(false)
 
   return (
     <>
-      {/* 🍔 Hamburger vises kun når menyen er lukket */}
-      {!isOpen && (
-        <button
-          className={navStyles.burger}
-          onClick={() => setIsOpen(true)}
-          aria-label="Åpne meny"
-        >
-          ☰
-        </button>
-      )}
-
-      {/* 🖥️ Desktop meny (synlig alltid) */}
+      {/* Desktop meny */}
       <nav className={navStyles.navList}>
         {navItems.map(({ to, text }) => (
           <NavLink
@@ -48,40 +35,39 @@ const Nav = () => {
         ))}
       </nav>
 
-      {/* 📱 Mobil overlay meny (når åpen) */}
-      {isOpen && (
-        <div className={navStyles.overlay}>
-          <button
-            className={navStyles.close}
-            onClick={closeMenu}
-            aria-label="Lukk meny"
-          >
-            ✕
-          </button>
-          <div className={navStyles.menu}>
-            {navItems.map(({ to, text }) => (
-              <NavLink
-                key={to}
-                to={to}
-                onClick={closeMenu}
-                className={({ isActive }) =>
-                  `${buttonStyles.nav} ${isActive ? buttonStyles.active : ''}`
-                }
-              >
-                {text}
-                <span className={buttonStyles.bubble}></span>
-                <span className={buttonStyles.bubble}></span>
-                <span className={buttonStyles.bubble}></span>
-              </NavLink>
-            ))}
-          </div>
+      {/* Mobil overlay */}
+      <div className={navStyles.overlay}>
+        <button
+          className={navStyles.close}
+          onClick={closeMenu}
+          aria-label="Lukk meny"
+        >
+          ✕
+        </button>
+        <div className={navStyles.menu}>
+          {navItems.map(({ to, text }) => (
+            <NavLink
+              key={to}
+              to={to}
+              onClick={closeMenu}
+              className={({ isActive }) =>
+                `${buttonStyles.nav} ${isActive ? buttonStyles.active : ''}`
+              }
+            >
+              {text}
+              <span className={buttonStyles.bubble}></span>
+              <span className={buttonStyles.bubble}></span>
+              <span className={buttonStyles.bubble}></span>
+            </NavLink>
+          ))}
         </div>
-      )}
+      </div>
     </>
   )
 }
 
 export default Nav
+
 
 
 

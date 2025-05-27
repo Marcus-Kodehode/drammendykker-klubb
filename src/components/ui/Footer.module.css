@@ -3,93 +3,106 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1.5rem 2rem;
+  gap: 2rem;
+  padding: 2.5rem 3rem;
   background: linear-gradient(to bottom, #001f3f, #004f6e, #00b8d9);
   color: white;
-  width: 100%;
-  gap: 2rem;
 }
 
-.left, .socialIcons, .right {
+.left, .center, .right {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.right {
   flex-direction: column;
-  align-items: flex-end;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 220px;
 }
 
-.partner,
-.vipps,
-.icon,
-.logo {
-  max-height: 48px;
-  height: auto;
-  width: auto;
-  object-fit: contain;
-  transition: all 0.3s ease;
+.left {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.partner:hover,
-.icon:hover,
-.logo:hover {
-  transform: scale(1.05);
-}
-
-.icon {
-  cursor: pointer;
-  filter: brightness(1.1);
-}
-
-.right p {
+.left p {
   font-size: 0.85rem;
   color: #e0e0e0;
   margin: 0;
 }
 
-.visuallyHidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+.logo {
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.08);
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+}
+
+.ctaText {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  opacity: 0.95;
+}
+
+.ctaButton {
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  background: #ffffff;
+  color: #004f6e;
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ctaButton:hover {
+  background: #e0f7ff;
+  transform: translateY(-2px);
+}
+
+.right {
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.icon {
+  height: 44px;
+  width: 44px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: scale(1.2) rotate(2deg);
+  filter: brightness(1.3) drop-shadow(0 0 6px rgba(255,255,255,0.4));
 }
 
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem 1rem 5rem;
     text-align: center;
+    padding: 2rem 1.5rem;
   }
 
-  .left,
-  .socialIcons,
-  .right {
-    justify-content: center;
+  .left, .center, .right {
     align-items: center;
-    flex-direction: row;
-    gap: 1rem;
+    justify-content: center;
   }
 
   .right {
-    flex-direction: column;
-  }
-
-  .logo {
-    max-width: 70px;
-    height: auto;
-  }
-
-  .socialIcons img {
-    width: 40px;
-    height: 40px;
+    margin-top: 1rem;
   }
 }
