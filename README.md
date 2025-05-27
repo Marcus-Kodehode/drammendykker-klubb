@@ -1,6 +1,5 @@
-
 <p align="center">
-  <img src="MBlogo1.png" alt="MB Logo" width="200"/>
+  <img src="public/images/personal/MBlogo1.png" alt="MB Logo" width="200"/>
 </p>
 
 # Drammen Dykkerklubb – Nettside
