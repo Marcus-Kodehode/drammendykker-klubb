@@ -75,7 +75,7 @@ Planer for fremtiden:
 ## 📸 Eksempel på nettsiden
 
 <p align="center">
-  <img src="public/images/Drammen-d.png" alt="Drammen Sportsdykkere Hjemmeside" width="400"/>
+  <img src="public/images/drammen-d.png" alt="Drammen Sportsdykkere Hjemmeside" width="400"/>
 </p>
 
 ---
