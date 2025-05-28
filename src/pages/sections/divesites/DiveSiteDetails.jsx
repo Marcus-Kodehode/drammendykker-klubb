@@ -1,6 +1,7 @@
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import { diveSites } from '../../../data/diveSites'
 import styles from './DiveSiteDetails.module.css'
+import { Link } from 'react-router-dom'
 
 const DiveSiteDetails = () => {
   const { id } = useParams()
@@ -34,7 +35,9 @@ const DiveSiteDetails = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.backLink}>
-        <a href="/dykkerplasser">← Tilbake til dykkersteder</a>
+        <Link to="/dykkerplasser" className={styles.backLink}>
+          ← Tilbake til dykkersteder
+        </Link>
       </div>
 
       <div className={styles.navButtons}>

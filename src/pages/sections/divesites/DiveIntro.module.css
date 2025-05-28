@@ -1,7 +1,7 @@
 .wrapper {
   padding: 3rem 1rem;
-  text-align: center;
   background-color: #f1f8fc;
+  text-align: center;
 }
 
 .columns {
@@ -12,16 +12,14 @@
 }
 
 .card {
-  background: #e9f6fb; /* ✨ Lys havblå bakgrunn */
+  background: #e9f6fb;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  flex: 1;
-  max-width: 600px;
+  border: 1px solid #d1ecf3;
+  max-width: 640px;
   margin: 0 auto;
   text-align: left;
-  transition: box-shadow 0.3s ease;
-  border: 1px solid #d1ecf3;
 }
 
 .card:hover {
@@ -38,26 +36,19 @@
   color: white;
 }
 
-.p1 {
-  background-color: #268df2; /* Justert blåfarge for bedre kontrast */
-}
-
-.p2 {
-  background-color: #f4b400;
-}
-
-.p3 {
-  background-color: #db4437;
-}
+.p1 { background-color: #268df2; }
+.p2 { background-color: #f4b400; }
+.p3 { background-color: #db4437; }
 
 @media (min-width: 768px) {
   .columns {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
   }
 
   .card {
     margin: 0;
+    width: 100%;
   }
 }

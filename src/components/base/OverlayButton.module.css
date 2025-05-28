@@ -1,21 +1,36 @@
 .button {
   position: absolute;
-  font-size: 2.5rem;
-  color: white;
-  background: none;
-  border: none;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 1.4rem;
+  border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1001;
-  padding: 0;           /* Hindrer ekstra klikkflate */
-  line-height: 1;       /* Hindrer høydevekst */
-  transition: color 0.2s ease;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 0;
 }
 
 .button:hover {
-  color: #00cfff;       /* Kun fargeskifte på tekst/ikon */
-  background: none;     /* Hindrer farget boks */
+  background: rgba(255, 255, 255, 0.12);
+  color: #00cfff;
+  box-shadow: 0 0 12px rgba(0, 207, 255, 0.4);
 }
 
+.button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  pointer-events: none;
+}
+
+/* Placement */
 .close {
   top: 1rem;
   right: 1rem;
@@ -23,12 +38,12 @@
 
 .prev {
   top: 50%;
-  left: 2rem;
+  left: 1rem;
   transform: translateY(-50%);
 }
 
 .next {
   top: 50%;
-  right: 2rem;
+  right: 1rem;
   transform: translateY(-50%);
 }

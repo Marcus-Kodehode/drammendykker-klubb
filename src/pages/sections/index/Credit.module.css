@@ -1,0 +1,112 @@
+.container {
+  background-color: #e0f8ff;
+  padding: 2rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 3rem;
+  flex-direction: column;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 0.4rem;
+  background: transparent;
+  box-shadow: 0 0 8px rgba(0, 128, 192, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.logo:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 12px rgba(0, 160, 255, 0.4);
+  filter: drop-shadow(0 4px 8px rgba(0, 79, 110, 0.3));
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  background: linear-gradient(60deg, #00cfff, #004f6e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.brand {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8rem;
+  background: linear-gradient(60deg, #00cfff, #004f6e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+
+.focusIn {
+  animation: focus-in-contract-bck 1s ease both;
+}
+
+.blurOut {
+  animation: blur-out-expand-fwd 1s ease both;
+}
+
+@keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(300px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(12px);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes blur-out-expand-fwd {
+  0% {
+    transform: translateZ(0);
+    filter: blur(0.01);
+  }
+  100% {
+    letter-spacing: 1em;
+    transform: translateZ(300px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    text-align: left;
+    gap: 2rem;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .textBlock {
+    align-items: flex-start;
+  }
+}

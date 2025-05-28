@@ -1,4 +1,5 @@
 import styles from './CalendarPreview.module.css';
+import { Link } from 'react-router-dom'
 
 const CalendarPreview = () => {
   return (
@@ -14,7 +15,9 @@ const CalendarPreview = () => {
           <p className={styles.title}>Skagerak Dykkekrets tur – Egypt</p>
         </div>
       </div>
-      <a href="/aktiviteter" className={styles.calendarLink}>Vis kalender</a>
+      <Link to="/aktiviteter" className={styles.calendarLink}>
+        Vis kalender
+      </Link>
     </section>
   );
 };

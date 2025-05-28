@@ -1,4 +1,5 @@
 import styles from './FacebookPreview.module.css'
+import { Link } from 'react-router-dom'
 
 const FacebookPreview = () => {
   return (
@@ -18,7 +19,9 @@ const FacebookPreview = () => {
           <p className={styles.date}>MAN, 25 MAI KL 18:00 UTC+1</p>
           <p className={styles.event}>Ekstraordinært årsmøte 2025</p>
           <p className={styles.subtext}>Blir oppdatert når bekreftet</p>
-          <a href="/aktiviteter" className={styles.calendarLink}>Vis kalender</a>
+          <Link to="/aktiviteter" className={styles.calendarLink}>
+            Vis kalender
+          </Link>
         </div>
       </div>
     </section>

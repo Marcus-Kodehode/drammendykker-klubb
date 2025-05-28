@@ -1,5 +1,7 @@
+import { FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa'
+import OverlayButton from '../../../../components/base/OverlayButton'
 import styles from './Lightbox.module.css'
-import OverlayButton from '../../../../components/base/OverlayButton';
+
 
 const Lightbox = ({ images, currentIndex, onClose, onPrev, onNext }) => {
   const image = images[currentIndex]
@@ -12,9 +14,36 @@ const Lightbox = ({ images, currentIndex, onClose, onPrev, onNext }) => {
         className={styles.image}
         onClick={(e) => e.stopPropagation()}
       />
-      <OverlayButton label="×" position="close" onClick={onClose} />
-      <OverlayButton label="←" position="prev" onClick={(e) => { e.stopPropagation(); onPrev(); }} />
-      <OverlayButton label="→" position="next" onClick={(e) => { e.stopPropagation(); onNext(); }} />
+
+      <OverlayButton
+        label={<FaTimes />}
+        position="close"
+        onClick={(e) => {
+          e.stopPropagation()
+          onClose()
+        }}
+        ariaLabel="Lukk bildevisning"
+      />
+
+      <OverlayButton
+        label={<FaChevronLeft />}
+        position="prev"
+        onClick={(e) => {
+          e.stopPropagation()
+          onPrev()
+        }}
+        ariaLabel="Forrige bilde"
+      />
+
+      <OverlayButton
+        label={<FaChevronRight />}
+        position="next"
+        onClick={(e) => {
+          e.stopPropagation()
+          onNext()
+        }}
+        ariaLabel="Neste bilde"
+      />
     </div>
   )
 }

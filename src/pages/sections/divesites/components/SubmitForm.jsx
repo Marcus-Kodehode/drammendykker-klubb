@@ -19,25 +19,32 @@ const SubmitForm = () => {
         <input type="text" id="address" name="address" required />
       </div>
 
-      <div className={styles.inlineGroup}>
-        <fieldset>
-          <legend>Adkomst</legend>
-          <label><input type="checkbox" name="access" value="Bil" /> Bil</label>
-          <label><input type="checkbox" name="access" value="Båt" /> Båt</label>
-        </fieldset>
+      <div className={styles.inputClusterGroup}>
+        <div className={styles.fieldGroup}>
+          <label>Adkomst</label>
+          <div className={styles.optionGroup}>
+            <label><input type="checkbox" name="access" value="Bil" /> Bil</label>
+            <label><input type="checkbox" name="access" value="Båt" /> Båt</label>
+          </div>
+        </div>
 
-        <fieldset>
-          <legend>WC fasiliteter</legend>
-          <label><input type="radio" name="wc" value="Ja" /> Ja</label>
-          <label><input type="radio" name="wc" value="Nei" /> Nei</label>
-        </fieldset>
+        <div className={styles.fieldGroup}>
+          <label>WC fasiliteter</label>
+          <div className={styles.optionGroup}>
+            <label><input type="radio" name="wc" value="Ja" /> Ja</label>
+            <label><input type="radio" name="wc" value="Nei" /> Nei</label>
+          </div>
+        </div>
 
-        <fieldset>
-          <legend>Skyllmuligheter</legend>
-          <label><input type="radio" name="rinse" value="Ja" /> Ja</label>
-          <label><input type="radio" name="rinse" value="Nei" /> Nei</label>
-        </fieldset>
+        <div className={styles.fieldGroup}>
+          <label>Skyllmuligheter</label>
+          <div className={styles.optionGroup}>
+            <label><input type="radio" name="rinse" value="Ja" /> Ja</label>
+            <label><input type="radio" name="rinse" value="Nei" /> Nei</label>
+          </div>
+        </div>
       </div>
+
 
       <div className={styles.fieldGroup}>
         <label htmlFor="description">Beskriv dykkeplassen.</label>
@@ -74,10 +81,11 @@ const SubmitForm = () => {
         <label htmlFor="species">Hva slags arter kan man finne på denne plassen</label>
         <input type="text" id="species" name="species" />
       </div>
+
       <div className={styles.fieldGroup}>
         <label htmlFor="images">Last opp bilder</label>
         <ImageUpload onChange={(e) => console.log(e.target.files)} />
-        </div>
+      </div>
 
       <div className={styles.submitWrap}>
         <button type="submit" className={styles.submitButton}>Send</button>

@@ -5,6 +5,7 @@ import CalendarPreview from './CalendarPreview';
 import Button from '../../../components/base/Button';
 import MembershipCard from '../../../components/base/MembershipCard';
 import SupportCard from '../../../components/base/SupportCard';
+import Credit from './Credit';
 
 const Hero = () => {
   return (
@@ -43,6 +44,7 @@ const Hero = () => {
       <div className={styles.facebook}>
         <FacebookPreview />
       </div>
+      <Credit />
     </section>
   );
 };

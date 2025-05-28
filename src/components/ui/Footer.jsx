@@ -2,6 +2,7 @@ import styles from './Footer.module.css'
 import logo from '/images/drammen-logo.webp'
 import facebook from '/images/facebook.png'
 import instagram from '/images/instagram.png'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -12,14 +13,19 @@ const Footer = () => {
         <img src={logo} alt="Logo" className={styles.logo} />
       </div>
 
-      {/* Midten: CTA */}
+      {/* Midten: CTA tekst + knapper */}
       <div className={styles.center}>
         <p className={styles.ctaText}>
-          Klar for nye eventyr under vann?
+          Klar for nye eventyr eller vil du støtte klubben?
         </p>
-        <a href="/kontakt" className={styles.ctaButton}>
-          Bli medlem
-        </a>
+        <div className={styles.buttonGroup}>
+          <Link to="/kontakt" className={styles.ctaButton}>
+            Bli medlem
+          </Link>
+          <Link to="/støtt-oss" className={styles.ctaButtonAlt}>
+            Støtt oss
+          </Link>
+        </div>
       </div>
 
       {/* Høyre: Sosiale medier */}
@@ -36,7 +42,6 @@ const Footer = () => {
 }
 
 export default Footer
-
 
 
 

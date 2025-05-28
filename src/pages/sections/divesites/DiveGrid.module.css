@@ -1,13 +1,10 @@
-
-/* Grid for kortene */
 .grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  padding: 0 1.25rem 3rem;
 }
 
-/* Selve kortene */
 .card {
   position: relative;
   background: white;
@@ -21,10 +18,9 @@
   transform: translateY(-4px);
 }
 
-/* Wrapper for å holde bildet i riktig ratio */
 .imageWrapper {
   width: 100%;
-  padding-top: 56.25%; /* 16:9 ratio */
+  padding-top: 56.25%;
   position: relative;
 }
 
@@ -35,12 +31,13 @@
   object-fit: cover;
 }
 
-/* Tittel plassert over bildet */
 .card h3 {
   position: absolute;
-  bottom: 0.5rem;
-  left: 0.5rem;
+  bottom: 0.75rem;
+  left: 0.75rem;
   margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
   color: white;
-  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
 }
